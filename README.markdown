@@ -3,10 +3,10 @@ Vendor JS
 
 Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transforms and Animations
 
-### Usage
+#### Usage
 
 
-#### 1. Internal
+##### 1. Internal
 
 	<style type="text/vendor">
 	#button {
@@ -18,11 +18,11 @@ Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transfor
 	</style>
 	
 
-#### 2. External File
+##### 2. External File
 
 	<link href="css3.css" rel="stylesheet" type="text/vendor" />
 
 
-### Integration
+#### Integration
 
 	<script src="vendor.min.js"></script>
