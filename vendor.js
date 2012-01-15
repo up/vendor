@@ -15,9 +15,9 @@
 (function(){
   
   var s = 'STYLE', l = 'LINK', h = 'HEAD', ct = 'text/css',
-    sVendorPrefix, prefix = 'vendor', sEOL = '\n',
-    $$ = function(name) { return doc.getElementsByTagName(name); },
-    doc = document, dbody = doc.body, dhead = $$(h)[0], 
+    sVendorPrefix, sGlobalPrefix = 'vendor', sEOL = '\n',
+    $T = function(name) { return doc.getElementsByTagName(name); },
+    doc = document, dbody = doc.body, dhead = $T(h)[0], 
     append = function(node) { dhead.appendChild(node); };
   
   function fnRequest(oCSSElement, sURL) {
@@ -41,8 +41,8 @@
     
     for(n1=0; n1<sLines.length; n1++) {
 
-      if(sLines[n1].match("" + prefix + "") !== null) {
-        sCache+= sEOL + sLines[n1].replace("-" + prefix + "-", sVendorPrefix);          
+      if(sLines[n1].match("" + sGlobalPrefix + "") !== null) {
+        sCache+= sEOL + sLines[n1].replace("-" + sGlobalPrefix + "-", sVendorPrefix);          
       }
       else {
         sCache+= sEOL + sLines[n1];          
@@ -57,9 +57,9 @@
       oSTYLENew = doc.createElement(s);
       oSTYLENew.type = ct;
       oSTYLENew.innerHTML = sCache; 
-      addLineBreak();
+      fnAddLineBreak();
       append(oSTYLENew);
-      addLineBreak();
+      fnAddLineBreak();
       oCSSElement.parentNode.removeChild(oCSSElement);      
     }
     
@@ -67,14 +67,14 @@
   
   function fnProcessCSSElements(sType){
     
-    var sInternalStyles = $$(s), 
-      sExternalStyles = $$(l),
+    var sInternalStyles = $T(s), 
+      sExternalStyles = $T(l),
       sStyleRules, oCSSElements = sType === l ? 
         sExternalStyles : sType === s ? 
           sInternalStyles : {};
 
     for(nI=0; nI<oCSSElements.length; nI++) {
-      if(oCSSElements[nI].type === 'text/' + prefix) {
+      if(oCSSElements[nI].type === 'text/' + sGlobalPrefix) {
         if(sType === l) {
           sStyleRules = fnRequest(oCSSElements[nI], oCSSElements[nI].href);
         } else if(sType === s) {
@@ -99,7 +99,7 @@
 
   };
 
-  function addLineBreak() {
+  function fnAddLineBreak() {
     append(doc.createTextNode(sEOL));    
   };
     
