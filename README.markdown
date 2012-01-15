@@ -5,24 +5,22 @@ Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transfor
 
 #### Usage
 
-
-##### 1. Internal
-
-	<style type="text/vendor">
-	#button {
-	  -vendor-transition: opacity 1s linear;
-	}
-	.block{
+	.box {
 	  -vendor-border-radius: 5px;
 	}
+
+##### Internal Stylesheet Integration
+
+	<style type="text/vendor">
+	..
 	</style>
 	
 
-##### 2. External File
+##### External Stylesheet Integration
 
 	<link href="css3.css" rel="stylesheet" type="text/vendor" />
 
 
-#### Integration
+##### Script Integration
 
 	<script src="vendor.min.js"></script>
