@@ -1,6 +1,8 @@
 Vendor JS
 =========
 
+### Write one prefix - and support all current devices.
+
 Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transforms and Animations
 
 ##  Usage
