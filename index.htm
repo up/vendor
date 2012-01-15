@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<title>Vendor JS Demo</title>
+
+<!-- example link -->
+<link href="css3.css" rel="stylesheet" type="text/vendor" />
+
+<!-- example style -->
+<style type="text/vendor">
+#fade {
+  -vendor-transition: opacity 1s linear;
+}
+.block{
+  -vendor-border-radius: 5px;
+}
+</style>
+<!-- end examples -->
+
+
+<style>
+body {
+  background-color: #eee;
+  font-family: arial;
+  text-align: center;
+  margin: 0;
+}
+#page {
+  font-family: arial;
+  text-align: center;
+  width: 200px;
+  height: 410px;
+  margin: 70px auto 0;
+  position: relative; 
+}
+h3 {
+  margin-top: 20px;
+}
+.block{
+  display: inline-block;
+  border: 5px solid #ccc;
+  padding: 20px;
+}
+
+#fade{
+  background-color: red;
+  opacity: 1;
+}
+#fade:hover{
+  opacity: 0;
+}
+#bouncer { 
+	color: #DDD;
+  position: absolute; 
+  left: 0;
+  width: 200px; 
+}
+</style>
+</head>
+
+<body>
+    
+<h3>Vendor JS Demo</h3>
+
+<div id="page">
+
+  <div id="fade" class="block">
+    Please hover me!
+  </div>
+
+  <div id="bouncer" class="block">
+    Bouncing Box
+  </div>
+</div>
+
+<script src="vendor.js"></script>
+
+</body>
+</html>

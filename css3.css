@@ -1,0 +1,46 @@
+#fade {
+  
+  /** ****************************************************
+    * CSS Backgrounds and Borders Module Level 3
+    * http://www.w3.org/TR/css3-background/
+  */
+  -vendor-box-shadow:       2px 2px 10px #000;
+  -vendor-border-radius:    15px 50px;
+
+  
+  /** ****************************************************
+    * CSS 2D Transforms
+    * http://www.w3.org/TR/css3-2d-transforms/
+  */
+  -vendor-transform:        scale(1.25,1.25);
+  -vendor-transform:        rotate(10deg);
+  -vendor-transform:        translate(50px, 10px);
+  -vendor-transform:        skewX(-15deg) skewY(10deg);
+  -vendor-transform-origin: top left;
+
+}
+
+
+/** ****************************************************
+  * CSS Animations Module Level 3
+  * http://www.w3.org/TR/css3-animations/
+*/
+
+@-vendor-keyframes bounce { 
+  0% { 
+    bottom: 0px; 
+  }
+  50% { 
+    bottom: 100px;
+    -vendor-animation-timing-function: ease-in;
+  }
+  100% { 
+    bottom: 0px;
+    -vendor-animation-timing-function: ease-out;
+  }
+} 
+
+#bouncer { 
+  -vendor-animation: bounce infinite 1.2s; 
+  background-image: -vendor-linear-gradient(bottom, rgb(2,30,29) 40%, rgb(28,57,56) 60%, rgb(56,86,84) 90%);
+}
