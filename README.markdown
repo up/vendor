@@ -7,9 +7,9 @@ Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transfor
 
 ## Sizes
 
-3.0 KB - Original
-1.2 KB - Minified
-0.7 KB - Minified and Gzipped
+* 3.0 KB - Original
+* 1.2 KB - Minified
+* 0.7 KB - Minified and Gzipped
 
 
 ##  Usage
