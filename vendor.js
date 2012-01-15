@@ -9,7 +9,7 @@
   * internal (<style>) or external (<link>) 
   *
   * Copyright: 2012 Uli Preuss
-  *  
+  * Licensed under the MIT license.
 */
 
 (function(){
@@ -37,8 +37,7 @@
 
     var sCache = "", n1, oSTYLENew,
       sLines = sStyleRules.split(sEOL), 
-      sType = oCSSElement.nodeName.toUpperCase(),
-      aPrefixes = ["-webkit-","-moz-","-o-","-ms-",""];
+      sType = oCSSElement.nodeName.toUpperCase();
     
     for(n1=0; n1<sLines.length; n1++) {
 
@@ -64,10 +63,6 @@
       oCSSElement.parentNode.removeChild(oCSSElement);      
     }
     
-  };
-  
-  function addLineBreak() {
-    append(doc.createTextNode(sEOL));    
   };
   
   function fnProcessCSSElements(sType){
@@ -104,7 +99,10 @@
 
   };
 
-  
+  function addLineBreak() {
+    append(doc.createTextNode(sEOL));    
+  };
+    
   (function () { // Initiation
     sVendorPrefix = fnGetVendorPrefix();
     fnProcessCSSElements(s);
