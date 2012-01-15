@@ -3,7 +3,7 @@ Vendor JS
 
 Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transforms and Animations
 
-#### Usage
+##  Usage
 
 	.box {
 	  -vendor-border-radius: 5px;
@@ -18,18 +18,18 @@ Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transfor
 	} 
 
 
-##### Internal Stylesheet Integration
+##  Internal Stylesheet
 
 	<style type="text/vendor">
 	...
 	</style>
 	
 
-##### External Stylesheet Integration
+##  External Stylesheet
 
 	<link href="my_vendor.css" rel="stylesheet" type="text/vendor" />
 
 
-##### Script Integration
+##  Script Integration
 
 	<script src="vendor.min.js"></script>
