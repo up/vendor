@@ -5,6 +5,13 @@ Vendor JS
 
 Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transforms and Animations
 
+## Sizes
+
+3.0 KB - Original
+1.2 KB - Minified
+0.7 KB - Minified and Gzipped
+
+
 ##  Usage
 
 	.box {
@@ -35,3 +42,5 @@ Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transfor
 ##  Script Integration
 
 	<script src="vendor.min.js"></script>
+
+.. and everything else happens automatically. ;)
