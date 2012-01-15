@@ -9,16 +9,25 @@ Adding the current browser's prefix for CSS Backgrounds and Borders, 2D Transfor
 	  -vendor-border-radius: 5px;
 	}
 
+	@-vendor-keyframes bounce { 
+	  ...
+	  100% { 
+	    bottom: 0px;
+	    -vendor-animation-timing-function: ease-out;
+	  }
+	} 
+
+
 ##### Internal Stylesheet Integration
 
 	<style type="text/vendor">
-	..
+	...
 	</style>
 	
 
 ##### External Stylesheet Integration
 
-	<link href="css3.css" rel="stylesheet" type="text/vendor" />
+	<link href="my_vendor.css" rel="stylesheet" type="text/vendor" />
 
 
 ##### Script Integration
